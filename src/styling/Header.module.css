@@ -1,0 +1,21 @@
+/*
+Light blue: #8ecae6
+Steel grey: #219ebc
+Black/dark blue: #023047
+Yellow: #ffb703
+Orange: #fb8500
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.header__div {
+  padding: 30px;
+}
+
+.logo {
+  max-width: 200px;
+  max-height: 120px;;
+}

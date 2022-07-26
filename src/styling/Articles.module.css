@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#header {
+    grid-area: header;
+}
+
+#userLoginBox {
+    grid-area: userLoginBox;
+}
+
+#navigation {
+    grid-area: navigation;
+}
+
+#sortBy {
+    grid-area: sortBy;
+}
+
+#articleList {
+    grid-area: articleList;
+}
+
+.articles__div {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 100px 70px auto;
+    grid-template-areas: 
+        "header userLoginBox"
+        "navigation sortBy"
+        "articleList articleList";
+}
+

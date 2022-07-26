@@ -8,7 +8,7 @@ import Articles from "./main-pages/Articles";
 import Topics from "./main-pages/Topics";
 import ArticleComments from "./main-pages/ArticleComments";
 import ErrorsPage from './Error-handling/ErrorsPage';
-import TopicsList from "./components/TopicsList"
+import TopicsSelector from "./components/TopicsSelector"
 
 export default function App() {
   return (
@@ -19,7 +19,7 @@ export default function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/topics" element={<Topics />}>
-            <Route path="*" element={<TopicsList />}></Route>
+            <Route path="*" element={<TopicsSelector />}></Route>
           </Route>
           <Route path="/articles" element={<Articles />}>
             <Route path="article_comments" element={<ArticleComments />}></Route>

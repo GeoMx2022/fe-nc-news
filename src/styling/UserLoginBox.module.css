@@ -1,0 +1,16 @@
+/*
+Light blue: #8ecae6
+Steel grey: #219ebc
+Black/dark blue: #023047
+Yellow: #ffb703
+Orange: #fb8500
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.home__div {
+  text-align: center;
+}

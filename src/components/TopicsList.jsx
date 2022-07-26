@@ -1,22 +1,14 @@
-import { useNavigate } from "react-router-dom";
+//import { useState, useEffect, useContext } from "react";
+//import { fetchTopics } from "../api/api";
 
-import { useState, useEffect, useContext } from "react";
-import { fetchTopics } from "../api/api";
+//import ArticleCard from "./ArticleCard";
 
-import ArticleCard from "./ArticleCard";
-
-export default function Topics() {  
-  let navigate = useNavigate();
+export default function TopicsList({children}) {
+  console.log(children)
+  /*
   const [topicArticleData, setTopicArticleData] = useState([]);
   const [isLoading, setIsLoading]  = useState(true);
-  const [topic, setTopic] = useState("");
-
-  const handleTopic = (event) => {
-    const LowerCaseTopic = event.target.innerText.toLowerCase();
-    navigate(`/topics/${LowerCaseTopic}`); 
-    setTopic(LowerCaseTopic); 
-  };
-
+  
   useEffect(() => {
     setIsLoading(true)
     fetchTopics(topic).then(topicArticleData =>{
@@ -27,24 +19,24 @@ export default function Topics() {
 
   return (
     <div>
+      <p>Hello there</p>
       <div className="topicsList__div--dataFetching">
         {isLoading ? (
           <div className="topicsList__div--loading">
             <h2>Loading...</h2>
           </div>
         ) : (
-        <div className="topicsList__div--btns">
-          <button onClick={(e) => handleTopic(e)}>Football</button>
-          <button onClick={(e) => handleTopic(e)}>Coding</button>
-          <button onClick={(e) => handleTopic(e)}>Cooking</button>
           <div>
               {topicArticleData.map((articles) =>(
                 <ArticleCard key={articles.article_id} articles={articles} />
               ))}
           </div>
-        </div>
        )}
       </div>
     </div>
   )
+  */
+ return (
+  <p>Hello there</p>
+ )
 }

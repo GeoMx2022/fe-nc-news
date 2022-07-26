@@ -1,9 +1,11 @@
 import styles from "../styling/Topics.module.css";
 
+import { Outlet } from "react-router-dom";
+
 import Header from "../components/Header";
 import UserLoginBox from "../components/UserLoginBox";
 import Navigation from "../components/Navigation";
-import TopicsList from "../components/TopicsList";
+import TopicsSelector from "../components/TopicsSelector";
 import SortBy from "../components/SortBy";
 
 export default function Topics() {
@@ -14,6 +16,7 @@ export default function Topics() {
       <Navigation />
       <SortBy />
       <TopicsSelector />
+      <Outlet />
     </div>
   )
 }

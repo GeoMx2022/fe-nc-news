@@ -3,7 +3,6 @@ import styles from "../styling/Home.module.css"
 import { Link } from "react-router-dom";
 
 import Header from "../components/Header";
-import UserLoginBox from "../components/UserLoginBox";
 
 export default function Home() {
   return (

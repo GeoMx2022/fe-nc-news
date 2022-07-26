@@ -17,10 +17,10 @@ export default function App() {
         <Route path="*" element={<ErrorsPage />}></Route>
           <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/topics" element={<Topics />}></Route>
           <Route path="/articles" element={<Articles />}>
-            <Route path="topics" element={<Topics />}></Route>
             <Route path="article_comments" element={<ArticleComments />}></Route>
-          </Route>
+          </Route>            
         </Routes>
       </div>
   </BrowserRouter>

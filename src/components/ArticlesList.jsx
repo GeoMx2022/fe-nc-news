@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { fetchArticles } from "../api/api";
 
 import ArticleCard from "../components/ArticleCard";

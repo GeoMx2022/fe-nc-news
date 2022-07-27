@@ -1,5 +1,7 @@
 import styles from "../styling/ArticleCard.module.css"
 
+import { Link } from "react-router-dom";
+
 export default function ArticleCard({articles}) {
   return (
     <div className={styles.articleCard__div}>

@@ -24,9 +24,10 @@ export default function App() {
           <Route path="*" element={<ErrorsPage />}></Route>
           <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/articles" element={<Articles />}></Route> 
           <Route path="/topics" element={<Topics />}></Route>
           <Route path="/topics/:topic" element={<ArticlesByTopic />}></Route>
-          <Route path="/articles" element={<Articles />}></Route>          
+          <Route path="/articles/:id" element={<ArticleComments />}></Route> 
         </Routes>
       </div>
   </BrowserRouter>

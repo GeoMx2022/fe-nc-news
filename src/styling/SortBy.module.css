@@ -1,0 +1,12 @@
+.sortBy__div {
+    padding: 5px 10px;
+    margin: 15px;
+    background: #219ebc;
+    border: 2px solid #023047;
+    border-radius: 12px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9em;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff; 
+}

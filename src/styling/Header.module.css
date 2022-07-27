@@ -1,13 +1,5 @@
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-.header__div {
-  padding: 20px;
-}
-
 .logo {
+  margin-top: 10px;
   max-width: 250px;
   max-height: 150px;;
 }

@@ -1,3 +1,38 @@
-.App {
-  text-align: center;
+* {
+  padding: 0px;
+  margin: 0px;
 }
+
+.app__div--header {
+  grid-area: header;
+}
+
+.app__div--userLoginBox {
+  grid-area: userLoginBox;
+}
+
+.app__div--navigation {
+  grid-area: navigation;
+}
+
+.app__div {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 90px 60px 715px;
+  grid-template-areas: 
+    "header userLoginBox"
+    "navigation ."
+    ". .";
+  align-content: stretch;
+  place-items: center;
+  place-self: center;
+  }
+
+/*
+Light blue: #8ecae6
+Steel grey: #219ebc
+Black/dark blue: #023047
+Yellow: #ffb703
+Orange: #fb5607
+white: #fffff
+*/

@@ -24,7 +24,7 @@ export default function ArticleRender({id}) {
             </div>
         ) : (
             <div className="articleRender__div--success">
-                <ArticleFocusCard article={focusArticle}/>    
+                <ArticleFocusCard article={focusArticle} id={id}/>    
             </div>
         )}
       </div>

@@ -27,3 +27,9 @@ export const fetchFocusArticle = (id) => {
       return data.article;
     });
 }  
+
+export const patchVotes = (id, voteCount) => {
+  return api.patch(`/articles/${id}`, {"inc_votes": voteCount}).then(({ data }) => {
+    return data.article;
+  });
+}

@@ -39,3 +39,10 @@ export const fetchArticleComments = (id) => {
     return data.comments;
   });
 }  
+
+export const postNewComment = (id, newComment, userLogin) => {
+  return api.post(`/articles/${id}/comments`, {"username": userLogin.username, "body": newComment}).then(({ data }) => {
+    console.log(data)
+    return data.comment;
+  });
+}

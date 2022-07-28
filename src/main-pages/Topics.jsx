@@ -4,8 +4,10 @@ import SortBy from "../components/SortBy";
 export default function Topics() {
   return (
     <div>
-      <SortBy />
-      <TopicsSelector />
+      <div>
+        <SortBy />
+        <TopicsSelector />
+      </div>  
     </div>
   )
 }

@@ -3,30 +3,28 @@
   margin: 0px;
 }
 
+/*
 .app__div--header {
-  grid-area: header;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
 .app__div--userLoginBox {
-  grid-area: userLoginBox;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 }
 
 .app__div--navigation {
-  grid-area: navigation;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
 }
 
 .app__div {
   display: grid;
   grid-template-columns: 75% 25%;
   grid-template-rows: 90px 60px 715px;
-  grid-template-areas: 
-    "header userLoginBox"
-    "navigation ."
-    ". .";
-  align-content: stretch;
-  place-items: center;
-  place-self: center;
-  }
+}
+*/
 
 /*
 Light blue: #8ecae6

@@ -1,6 +1,8 @@
 .home__div {
+  /*
   grid-column: 1 / 3; 
   grid-row: 3 / 4; 
+  */
   display: flex;
   flex-direction: column;
   align-items: center;

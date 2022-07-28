@@ -10,12 +10,13 @@ import Home from "./main-pages/Home";
 import Login from "./main-pages/Login";
 import Articles from "./main-pages/Articles";
 import Topics from "./main-pages/Topics";
-import ArticleComments from "./main-pages/ArticleComments";
+import ArticleComments from "./components/ArticleComments";
 import ErrorsPage from './Error-handling/ErrorsPage';
 import ArticlesByTopic from "./components/ArticlesByTopic"
 import Header from "./components/Header";
 import UserLoginBox from "./components/UserLoginBox";
 import Navigation from "./components/Navigation";
+import Article from "./main-pages/Article";
 
 export default function App() {
   return (
@@ -31,7 +32,8 @@ export default function App() {
           <Route path="/articles" element={<Articles />}></Route> 
           <Route path="/topics" element={<Topics />}></Route>
           <Route path="/topics/:topic" element={<ArticlesByTopic />}></Route>
-          <Route path="/articles/:id" element={<ArticleComments />}></Route> 
+          <Route path="/articles/:id" element={<Article />}></Route>
+          <Route path="/articles/:id/comments" element={<ArticleComments />}></Route> 
         </Routes>
       </div>
   </BrowserRouter>

@@ -1,6 +1,6 @@
 .navigation__div {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }    
 
 .navigation__link1 {

@@ -33,3 +33,9 @@ export const patchVotes = (id, voteCount) => {
     return data.article;
   });
 }
+
+export const fetchArticleComments = (id) => {
+  return api.get(`/articles/${id}/comments`).then(({ data }) => {
+    return data.comments;
+  });
+}  

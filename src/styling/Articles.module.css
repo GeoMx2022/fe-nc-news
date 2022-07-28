@@ -1,35 +1,9 @@
-* {
-    margin: 0px;
-    padding: 0px;
+.articles__articleList {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
 }
 
-#header {
-    grid-area: header;
+.articles__sortBy {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;  
 }
-
-#userLoginBox {
-    grid-area: userLoginBox;
-}
-
-#navigation {
-    grid-area: navigation;
-}
-
-#sortBy {
-    grid-area: sortBy;
-}
-
-#articleList {
-    grid-area: articleList;
-}
-
-.articles__div {
-    display: grid;
-    grid-template-columns: 75% 25%;
-    grid-template-rows: 100px 70px auto;
-    grid-template-areas: 
-        "header userLoginBox"
-        "navigation sortBy"
-        "articleList articleList";
-}
-

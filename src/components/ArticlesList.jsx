@@ -1,4 +1,7 @@
+import styles from "../styling/ArticlesList.module.css"
+
 import { useState, useEffect } from "react";
+
 import { fetchArticles } from "../api/api";
 
 import ArticleCard from "../components/ArticleCard";
@@ -15,7 +18,7 @@ export default function ArticlesList() {
       },[])
 
   return (
-    <div>
+    <div className={styles.articletest}>
       <div className="articlesList__div">
         {isLoading ? (
           <div className="articlesList__div--loading">

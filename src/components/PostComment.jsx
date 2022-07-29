@@ -4,6 +4,8 @@ import { UserLoginContext } from "../contexts/UserLogin";
 
 import { postNewComment } from "../api/api";
 
+import ArticleCommentsCard from "./ArticleCommentsCard"
+
 export default function PostComment({id}) {
   const {userLogin, setUserLogin} = useContext(UserLoginContext);
   const [isPosted, setIsPosted] = useState(false);
@@ -11,7 +13,7 @@ export default function PostComment({id}) {
   const [postedComment, setPostedComment] = useState({});
   const [isLoading, setIsLoading]  = useState(true);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event) => {   
     setIsPosted(false);
     event.preventDefault();
     setIsLoading(true)
@@ -22,29 +24,21 @@ export default function PostComment({id}) {
     setIsPosted(true);
   }
 
+   if (isPosted) return (
+    <div className="postedItem">
+      <p>Your Item has Been Added:</p>
+      <ArticleCommentsCard comment={postedComment}/>
+    </div>
+   )
+
    return (
     <div>
-
       <div>
-        <form onSubmit={(event)=>{{handleSubmit(event)}}}>
+        <form onSubmit={(event)=>{handleSubmit(event)}}>
           <label>Comment Text:<input value={newComment} onChange={(event) => setNewComment(event.target.value)}></input></label>
+          <button type="submit">Post Comment</button>
         </form>
-        <button type="submit">Post Comment</button>
       </div>
-
-      <div>
-        {isPosted ? (
-          <div className="postedItem">
-            <p>Your Item has Been Added:</p>
-            <p>{postedComment}</p>
-          </div>
-        ) :(
-          <div className="failedToPost">
-            <></>
-          </div>
-        )}
-      </div>
-
     </div>
   )
 }

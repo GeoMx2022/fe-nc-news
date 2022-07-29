@@ -5,9 +5,11 @@ import SortBy from "../components/SortBy";
 
 export default function Articles() {
   return (
-    <div className={styles.articles__div}>
-      <SortBy className={styles.articles__sortBy} />
-      <ArticleList className={styles.articles__articleList} />
+    <div>
+        <div className={styles.articles__div}>
+        <SortBy className={styles.articles__sortBy} />
+        <ArticleList className={styles.articles__articleList} />
+      </div>
     </div>
   )
 }

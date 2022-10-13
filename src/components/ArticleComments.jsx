@@ -13,13 +13,17 @@ export default function ArticleComments() {
       <div>
         <ArticleRender id={id}/>
       </div>
-    
-      <div className="articleCommentsRender__div">
-        <ArticleCommentsList id={id}/>    
-      </div>
 
       <div>
         <PostComment id={id} />
+      </div>
+
+      <div>
+        <p>Previous comments:</p>
+      </div>
+
+      <div className="articleCommentsRender__div">
+        <ArticleCommentsList id={id}/>    
       </div>
 
     </div>

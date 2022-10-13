@@ -13,7 +13,7 @@ export default function ArticleCommentsList({id}) {
           setComments(data);
           setIsLoading(false);
         })
-        },[])
+        },[id])
 
   return (
     <div>

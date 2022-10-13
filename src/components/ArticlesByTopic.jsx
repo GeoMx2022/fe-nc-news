@@ -1,23 +1,60 @@
 import { useState, useEffect} from "react";
 
-import { useParams } from "react-router-dom"; 
+import { useParams, useSearchParams } from "react-router-dom"; 
 
-import { fetchTopics } from "../api/api";
+import { fetchArticles } from "../api/api";
 
 import ArticleCard from "./ArticleCard";
+import SortBy from "./SortBy";
 
 export default function ArticlesByTopic() {
     const [topicArticleData, setTopicArticleData] = useState([]);
     const [isLoading, setIsLoading]  = useState(true);
+    const [searchParams, setSearchParams] = useSearchParams();
     const {topic} = useParams();
+
+    function changeSortOrder(event) {
+      const dropDownValue = event.target.value;
+      if (dropDownValue === "newest") {
+        setSearchParams({
+          sort_by: "created_at",
+          order: "desc",
+        });
+      } else if (dropDownValue === "oldest") {
+        setSearchParams({
+          sort_by: "created_at",
+          order: "asc",
+        });
+      } else if (dropDownValue === "mostComments") {
+        setSearchParams({
+          sort_by: "comment_count",
+          order: "desc",
+        });
+      } else if (dropDownValue === "leastComments") {
+        setSearchParams({
+          sort_by: "comment_count",
+          order: "asc",
+        });
+      } else if (dropDownValue === "mostVotes") {
+        setSearchParams({
+          sort_by: "votes",
+          order: "desc",
+        });
+      } else if (dropDownValue === "leastVotes") {
+        setSearchParams({
+          sort_by: "votes",
+          order: "asc",
+        });
+      }
+    }
     
     useEffect(() => {
         setIsLoading(true)
-        fetchTopics(topic).then(topicArticleData =>{
+        fetchArticles(searchParams, topic).then(topicArticleData =>{
           setTopicArticleData(topicArticleData);
           setIsLoading(false);
         });
-      }, [topic]);
+      }, [searchParams, topic]);
 
   return (
     <div>
@@ -28,14 +65,15 @@ export default function ArticlesByTopic() {
           </div>
         ) : (
           <div>
+            <SortBy sortOption={changeSortOrder} />
             <div>
-              {topicArticleData.map((articles) =>(
+              {topicArticleData.map((articles) => (
                 <ArticleCard key={articles.article_id} articles={articles} />
               ))}
             </div>
           </div>
         )}
-      </div> 
+      </div>
     </div>
-  )
+  );
 }

@@ -26,7 +26,7 @@ export default function PostComment({id}) {
 
    if (isPosted) return (
     <div className="postedItem">
-      <p>Your Item has Been Added:</p>
+      <p>Your Comment has Been Added:</p>
       <ArticleCommentsCard comment={postedComment}/>
     </div>
    )

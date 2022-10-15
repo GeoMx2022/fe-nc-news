@@ -13,7 +13,6 @@ import Articles from "./main-pages/Articles";
 import Topics from "./main-pages/Topics";
 import ArticleComments from "./components/ArticleComments";
 import ErrorsPage from './Error-handling/ErrorsPage';
-import ArticlesByTopic from "./components/ArticlesByTopic"
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Article from "./main-pages/Article";
@@ -41,7 +40,7 @@ export default function App() {
             <Route path="/login" element={<Login />}></Route>
             <Route path="/articles" element={<Articles />}></Route> 
             <Route path="/topics" element={<Topics />}></Route>
-            <Route path="/topics/:topic" element={<ArticlesByTopic />}></Route>
+            <Route path="/topics/:topic" element={<Articles />}></Route>
             <Route path="/articles/:id" element={<Article />}></Route>
             <Route path="/articles/:id/comments" element={<ArticleComments />}></Route> 
           </Routes>

@@ -9,7 +9,7 @@ import SortBy from "./SortBy";
 import ArticleCard from "../components/ArticleCard";
 import ErrorsPage from "../Error-handling/ErrorsPage";
 
-export default function ArticlesList() {
+export default function ArticlesList({topic}) {
   const [searchParams, setSearchParams] = useSearchParams();
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading]  = useState(true);
@@ -52,7 +52,7 @@ export default function ArticlesList() {
 
   useEffect(()=>{
     setIsLoading(true)
-      fetchArticles(searchParams)
+      fetchArticles(searchParams, topic)
       .then(data => {
         setArticles(data);
         setIsLoading(false);
@@ -61,7 +61,7 @@ export default function ArticlesList() {
         setIsLoading(false)
         setError(err)
       })
-      },[searchParams])
+      },[searchParams, topic])
 
   if (error) return <ErrorsPage errMsg={error.response.data.msg}/>    
   return (

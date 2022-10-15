@@ -12,7 +12,8 @@ Views News is a social media app that allows users to:
 * Delete a comment that the user has posted
 * IN PROGRESS - User profile
 
-This was my first project developing a functional and user-friendly frontend in React. 
+This was my first project developing a functional and user-friendly frontend in React.  
+The app uses a default loggged user to remove the need for authentication at this stage.
 
 -----
 #### Hosted App  
@@ -21,7 +22,7 @@ A hosted version of the app on Heroku can be found here: [Views News]()
 -----
 ####  Repository  
 This repository contains all the frontend code required for the Views News App. To see the backend code for this project visit: 
-[Views News Backend - Github](https://github.com/GeoMx2022/backend-project-nc-news)
+[Views News Backend - Github](https://github.com/GeoMx2022/backend-project-nc-news)  
 [Views News Backend - Hosted App](https://nc-news-application.herokuapp.com/api)
 
 -----

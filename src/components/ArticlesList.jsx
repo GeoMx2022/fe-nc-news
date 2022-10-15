@@ -7,11 +7,13 @@ import { fetchArticles } from "../api/api";
 
 import SortBy from "./SortBy";
 import ArticleCard from "../components/ArticleCard";
+import ErrorsPage from "../Error-handling/ErrorsPage";
 
 export default function ArticlesList() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading]  = useState(true);
+  const [error, setError] = useState(null);
 
   function changeSortOrder(event) {
     const dropDownValue = event.target.value;
@@ -50,12 +52,18 @@ export default function ArticlesList() {
 
   useEffect(()=>{
     setIsLoading(true)
-      fetchArticles(searchParams).then(data => {
+      fetchArticles(searchParams)
+      .then(data => {
         setArticles(data);
         setIsLoading(false);
       })
+      .catch((err) => {
+        setIsLoading(false)
+        setError(err)
+      })
       },[searchParams])
 
+  if (error) return <ErrorsPage errMsg={error.response.data.msg}/>    
   return (
     <div className={styles.articletest}>
       <div className="articlesList__div">

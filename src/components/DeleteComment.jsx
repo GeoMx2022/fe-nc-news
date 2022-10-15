@@ -3,22 +3,24 @@ import styles from "../styling/DeleteComment.module.css";
 import { useState } from "react";
 
 import { deleteComment } from "../api/api"
+import ErrorsPage from "../Error-handling/ErrorsPage";
 
 export default function DeleteComment({commentId}) {
   const [disableBtn, setDisableBtn] = useState(false);
-  const [err, setErr] = useState(null);
+  const [error, setError] = useState(null);
 
   const handleDelete = (event) => {
     event.preventDefault();
-    setErr(null)
+    setError(null)
     setDisableBtn(true)
-    deleteComment(commentId).catch((err) => {
-      setErr("Something went wrong. Try again");
+    deleteComment(commentId)
+    .catch((err) => {
+      setError(err);
       setDisableBtn(false)
     })
   }
 
-  if (err) return <p>{err}</p>
+  if (error) return <ErrorsPage errMsg={error.response.data.msg} />;    
   return (
     <div className={styles.deleteComment__div}>
       <button disabled={disableBtn} onClick={handleDelete}>Delete</button>

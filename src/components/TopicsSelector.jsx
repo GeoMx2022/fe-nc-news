@@ -6,17 +6,26 @@ import { fetchTopicsTitles } from "../api/api";
 
 import { v4 as uuidv4 } from "uuid";
 
+import ErrorsPage from "../Error-handling/ErrorsPage";
+
 export default function TopicsSelector() {
     const [topicTitleData, setTopicTitleData] = useState([]);
     const [isLoading, setIsLoading]  = useState(true);
+    const [error, setError] = useState(null);
     
     useEffect(() => {
-        fetchTopicsTitles().then(topicsTitleData =>{
+        fetchTopicsTitles()
+          .then((topicsTitleData) => {
             setTopicTitleData(topicsTitleData);
             setIsLoading(false);
-        });
+          })
+          .catch((err) => {
+            setIsLoading(false)
+            setError(err);
+          });
     }, []);
 
+    if (error) return <ErrorsPage errMsg={error.response.data.msg} />;    
     return (
         <div>
           <div className="topicsSelector__div--dataFetching">

@@ -6,11 +6,13 @@ import { fetchArticles } from "../api/api";
 
 import ArticleCard from "./ArticleCard";
 import SortBy from "./SortBy";
+import ErrorsPage from "../Error-handling/ErrorsPage";
 
 export default function ArticlesByTopic() {
     const [topicArticleData, setTopicArticleData] = useState([]);
     const [isLoading, setIsLoading]  = useState(true);
     const [searchParams, setSearchParams] = useSearchParams();
+    const [error, setError] = useState(null);
     const {topic} = useParams();
 
     function changeSortOrder(event) {
@@ -50,12 +52,18 @@ export default function ArticlesByTopic() {
     
     useEffect(() => {
         setIsLoading(true)
-        fetchArticles(searchParams, topic).then(topicArticleData =>{
-          setTopicArticleData(topicArticleData);
-          setIsLoading(false);
-        });
+        fetchArticles(searchParams, topic)
+          .then((topicArticleData) => {
+            setTopicArticleData(topicArticleData);
+            setIsLoading(false);
+          })
+          .catch((err) => {
+            setIsLoading(false);
+            setError(err);
+          })
       }, [searchParams, topic]);
 
+  if (error) return <ErrorsPage errMsg={error.response.data.msg} />;    
   return (
     <div>
       <div className="topicsList__div--dataFetching">

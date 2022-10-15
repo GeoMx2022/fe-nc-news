@@ -5,6 +5,7 @@ import { UserLoginContext } from "../contexts/UserLogin";
 import { postNewComment } from "../api/api";
 
 import ArticleCommentsCard from "./ArticleCommentsCard"
+import ErrorsPage from "../Error-handling/ErrorsPage";
 
 export default function PostComment({id}) {
   const {userLogin} = useContext(UserLoginContext);
@@ -12,16 +13,23 @@ export default function PostComment({id}) {
   const [newComment, setNewComment] = useState("");
   const [postedComment, setPostedComment] = useState({});
   const [isLoading, setIsLoading]  = useState(false);
+  const [error, setError] = useState(null);
 
   const handleSubmit = (event) => {   
-    setIsPosted(false);
     event.preventDefault();
+    setIsPosted(false);
     setIsLoading(true)
-    postNewComment(id, newComment, userLogin).then(data => {
-      setPostedComment(data)
-    });
-    setIsLoading(false)
-    setIsPosted(true);
+    postNewComment(id, newComment, userLogin)
+      .then((data) => {
+        setPostedComment(data);    
+        setIsLoading(false);
+        setIsPosted(true);
+      })
+      .catch((err) => {
+        setIsPosted(false)
+        setIsLoading(false)
+        setError(err);
+      });
   }
 
    if (isLoading) return (
@@ -36,6 +44,8 @@ export default function PostComment({id}) {
       <ArticleCommentsCard comment={postedComment}/>
     </div>
    )
+
+    if (error) return <ErrorsPage errMsg={error.response.data.msg} />;    
 
    return (
     <div>

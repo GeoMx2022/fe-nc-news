@@ -11,7 +11,7 @@ import Home from "./main-pages/Home";
 import Login from "./main-pages/Login";
 import Articles from "./main-pages/Articles";
 import Topics from "./main-pages/Topics";
-import ArticleComments from "./components/ArticleComments";
+import Comments from "./main-pages/Comments";
 import ErrorsPage from './Error-handling/ErrorsPage';
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
@@ -42,7 +42,7 @@ export default function App() {
             <Route path="/topics" element={<Topics />}></Route>
             <Route path="/topics/:topic" element={<Articles />}></Route>
             <Route path="/articles/:id" element={<Article />}></Route>
-            <Route path="/articles/:id/comments" element={<ArticleComments />}></Route> 
+            <Route path="/articles/:id/comments" element={<Comments />}></Route> 
           </Routes>
         </div>
         </UserLoginContext.Provider>

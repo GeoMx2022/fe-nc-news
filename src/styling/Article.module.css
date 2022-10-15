@@ -1,4 +1,4 @@
-.articleFocusCard__div {
+.article__div {
     margin: 10px;
     padding: 12px;
     background: #8ecae6;
@@ -8,6 +8,6 @@
     font-size: 0.8em;
 }
 
-.articleFocusCard__div h2 {
+.article__div h2 {
     font-size: 1em;
 }

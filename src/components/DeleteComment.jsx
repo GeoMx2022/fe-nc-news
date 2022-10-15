@@ -3,6 +3,7 @@ import styles from "../styling/DeleteComment.module.css";
 import { useState } from "react";
 
 import { deleteComment } from "../api/api"
+
 import ErrorsPage from "../Error-handling/ErrorsPage";
 
 export default function DeleteComment({commentId}) {

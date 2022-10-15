@@ -14,14 +14,17 @@ Views News is a social media app that allows users to:
 
 This was my first project developing a functional and user-friendly frontend in React. 
 
+-----
 #### Hosted App  
 A hosted version of the app on Heroku can be found here: [Views News]()
 
+-----
 ####  Repository  
 This repository contains all the frontend code required for the Views News App. To see the backend code for this project visit: 
 [Views News Backend - Github](https://github.com/GeoMx2022/backend-project-nc-news)
 [Views News Backend - Hosted App](https://nc-news-application.herokuapp.com/api)
 
+-----
 ####  SetUp & Installation Instructions
 1. Fork this repo to your own GitHub an the GitHub website.
 2. Copy the HTTPS link to your GitHub. 
@@ -32,5 +35,6 @@ This repository contains all the frontend code required for the Views News App. 
 
 That's it. You are done.  
 
+-----
 ####  Recommended Application Specifications  
 **NodeJs**: v18  

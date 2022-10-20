@@ -1,3 +1,5 @@
+import styles from "../styling/Comments.module.css"
+
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
@@ -28,17 +30,17 @@ export default function Comments() {
 
   if (error) return <ErrorsPage errMsg={error.response.data.msg} />;
   return (
-    <div>
+    <div className={styles.comments__div}>
       <Article id={id} />
       <PostComment id={id} />
-      <p>Previous comments:</p>
-      <div className="comments__div">
+      <p className={styles.comments__div__p}>Previous comments:</p>
+      <div>
         {isLoading ? (
-          <div className="comments__div__loading">
+          <div className={styles.comments__div__loading}>
             <h2>Loading...</h2>
           </div>
         ) : (
-          <div className="comments__div__map">
+          <div>
             {comments.map((comment) => (
               <CommentsCard key={comment.comment_id} comment={comment} />
             ))}

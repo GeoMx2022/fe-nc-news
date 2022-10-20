@@ -1,40 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Londrina+Solid:wght@300&display=swap");
+
 .home__div {
-  /*
-  grid-column: 1 / 3; 
-  grid-row: 3 / 4; 
-  */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .home__ptag1 {
-  padding: 15px;
-  margin: 70px 10px 0px 10px; 
-  font-size: 1.8em;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: flex-end;
+  flex: 1 1 6rem;
+  font-size: 2em;
+  font-family: "Londrina Solid", cursive;
 }
 
 .home__ptag2 {
-  padding: 10px;
-  margin: 0px 10px;
+  margin: 0px 50px;
+  display: flex;
+  align-items: center;
+  flex: 1 1 6rem;
   font-size: 1.2em;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Londrina Solid", cursive;
   text-align: center;
   color: #fb5607;
 }
 
-.home__divEnterapp {
-  padding: 80px 40px;
-  margin: 90px 40px;
-  background: #219ebc;
+.home__div__enterapp__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 15rem;
+}
+
+.home__div__enterapp__link {
+  height: 90px;
+  width: 200px;
+  line-height: 90px;
+  background: #e9ecef;
   border: 2px solid #023047;
   border-radius: 12px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Londrina Solid", cursive;
   font-size: 2em;
   text-align: center;
   text-decoration: none;
-  color: #ffffff;
+  color: #023047;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 }
-
-

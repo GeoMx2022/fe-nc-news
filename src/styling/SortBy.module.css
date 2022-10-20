@@ -1,12 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Londrina+Solid:wght@300&display=swap");
+
 .sortBy__div {
-    padding: 5px 10px;
-    margin: 15px;
-    background: #219ebc;
-    border: 2px solid #023047;
-    border-radius: 12px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 0.9em;
-    text-align: center;
-    text-decoration: none;
-    color: #ffffff; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 180px;
+  padding: 5px 10px;
+  margin: 12px;
+  background: #e9ecef;
+  border: 2px solid #023047;
+  border-radius: 12px;
+  font-family: "Londrina Solid", cursive;
+  font-size: 0.9em;
+  color: #023047;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.sortBy__div__select {
+  font-family: "Londrina Solid", cursive;
+  font-size: 0.9em;
 }

@@ -1,3 +1,5 @@
+import styles from "../styling/Topics.module.css"
+
 import { Link } from "react-router-dom";
 
 import { useState, useEffect } from "react";
@@ -7,6 +9,7 @@ import { fetchTopicsTitles } from "../api/api";
 import { v4 as uuidv4 } from "uuid";
 
 import ErrorsPage from "../Error-handling/ErrorsPage";
+import Navigation from "../components/Navigation";
 
 export default function Topics() {
     const [topicTitleData, setTopicTitleData] = useState([]);
@@ -28,17 +31,18 @@ export default function Topics() {
   if (error) return <ErrorsPage errMsg={error.response.data.msg} />;    
   return (
     <div>
-      <div className="topicsSelector__div--dataFetching">
+      <Navigation />
+      <div>
         {isLoading ? (
-          <div className="topicsSelector__div--loading">
+          <div className={styles.topics__div__loading}>
             <h2>Loading...</h2>
           </div>
         ) : (
           <div>
-            <div className="topicsSelector__div--map">
+            <div className={styles.topics__div}>
               {topicTitleData.map((topic) => (
                 <div key={uuidv4()}>
-                  <Link to={`/topics/${topic.slug}`}>{topic.slug}</Link>
+                  <Link to={`/topics/${topic.slug}`} className={styles.topics__div__link}>{topic.slug.slice(0, 1).toUpperCase() + topic.slug.substring(1)}</Link>
                 </div>
               ))}
             </div>

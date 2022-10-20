@@ -24,9 +24,9 @@ export default function DeleteComment({commentId}) {
   if (error) return <ErrorsPage errMsg={error.response.data.msg} />;    
   return (
     <div className={styles.deleteComment__div}>
-      <button disabled={disableBtn} onClick={handleDelete}>Delete</button>
+      <button disabled={disableBtn} onClick={handleDelete} className={disableBtn === false ? styles.deleteComment__div__btn : styles.deleteComment__div__btn__disabled}>Delete</button>
       {disableBtn === true ? (
-        <p>Comment has been deleted</p>
+        <p className={styles.deleteComment__div__p}>Comment has been deleted</p>
       ) : <></>}
     </div>
   )

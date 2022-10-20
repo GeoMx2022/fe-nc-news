@@ -1,13 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Londrina+Solid:wght@300&display=swap");
+
 .articleCard__div {
-    margin: 10px;
-    padding: 12px;
-    background: #8ecae6;
-    border: 2px solid #023047;
-    border-radius: 12px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 0.8em;
+  margin: 10px;
+  padding: 12px;
+  background: #8ecae6;
+  border: 2px solid #023047;
+  border-radius: 12px;
+  font-family: "Londrina Solid", cursive;
+  font-size: 0.8em;
+  text-decoration: none;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 }
 
-.articleCard__div h2 {
-    font-size: 1em;
+.articleCard__lineBreak {
+  line-height: 10px;
 }

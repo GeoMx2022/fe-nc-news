@@ -11,12 +11,15 @@ export default function CommentsCard({comment}) {
   return (
     <div className={styles.commentsCard__div}>
       <p>{comment.body}</p>
-      <p>Author: {comment.author}</p>
-      <p>Votes: {comment.votes}</p>
-      <p>Posted: {comment.created_at}</p>
+      <pre><br className={styles.commentsCard__lineBreak}></br></pre>
+      <p><strong>Author: </strong>{comment.author}</p>
+      <p><strong>Votes: </strong>{comment.votes}</p>
+      <p><strong>Posted: </strong>{comment.created_at}</p>
       {comment.author === userLogin.username ? (
-        <DeleteComment commentId={comment.comment_id}/>
-      ) : <></>}
+        <DeleteComment commentId={comment.comment_id} />
+      ) : (
+        <></>
+      )}
     </div>
-  )
+  );
 }

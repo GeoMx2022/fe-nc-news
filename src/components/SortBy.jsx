@@ -3,8 +3,8 @@ import styles from "../styling/SortBy.module.css"
 export default function SortBy({sortOption}) { 
       return (
       <div className={styles.sortBy__div}>
-      <label id="sort-label">Sort By: </label>
-      <select id="sort-select" onChange={sortOption}>
+      <label>Sort By: </label>
+      <select className={styles.sortBy__div__select} onChange={sortOption}>
         <option>--Select--</option>
         <option value="newest">Newest</option>
         <option value="oldest">Oldest</option>

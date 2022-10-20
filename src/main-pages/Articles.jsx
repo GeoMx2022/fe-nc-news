@@ -8,6 +8,7 @@ import { fetchArticles } from "../api/api";
 import SortBy from "../components/SortBy";
 import ArticleCard from "../components/ArticleCard";
 import ErrorsPage from "../Error-handling/ErrorsPage";
+import Navigation from "../components/Navigation"
 
 export default function Articles() {
   const { topic } = useParams();
@@ -67,15 +68,16 @@ export default function Articles() {
   if (error) return <ErrorsPage errMsg={error.response.data.msg} />;    
   return (
     <div>
-      <div className={styles.articles__div}>
+      <div>
         {isLoading ? (
-          <div className="articlesList__div--loading">
+          <div className={styles.articlesList__div__loading}>
             <h2>Loading...</h2>
           </div>
         ) : (
           <div>
+            <Navigation />
             <SortBy sortOption={changeSortOrder} />
-            <div className="articlesList__div--map">
+            <div>
               {articles.map((articles) => (
                 <ArticleCard key={articles.article_id} articles={articles} />
               ))}

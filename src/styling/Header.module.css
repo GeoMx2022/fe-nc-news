@@ -1,5 +1,10 @@
+.header__div {
+  display: flex;
+  align-items: center;
+  flex: 1 1 8rem;
+}
+
 .logo {
-  margin-top: 10px;
-  max-width: 250px;
-  max-height: 150px;;
+  max-width: 300px;
+  max-height: 200px;;
 }

@@ -1,9 +1,15 @@
 .commentsCard__div {
-    margin: 10px;
-    padding: 12px;
-    background: #8ecae6;
-    border: 2px solid #023047;
-    border-radius: 12px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 0.8em;
+  margin: 10px;
+  padding: 12px;
+  background: #8ecae6;
+  border: 2px solid #023047;
+  border-radius: 12px;
+  font-family: "Londrina Solid", cursive;
+  font-size: 0.8em;
+  text-decoration: none;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.commentsCard__lineBreak {
+  line-height: 10px;
 }

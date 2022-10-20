@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Londrina+Solid:wght@300&display=swap");
+
+.topics__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.topics__div__loading {
+  display: flex;
+  font-family: "Londrina Solid", cursive;
+  font-size: 2.5em;
+  text-decoration: none;
+}
+
+.topics__div__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  margin: 15px;
+  height: 60px;
+  width: 120px;
+  line-height: 60px;
+  background: #fb5607;
+  border: 2px solid #023047;
+  border-radius: 12px;
+  font-family: "Londrina Solid", cursive;
+  font-size: 2em;
+  text-align: center;
+  text-decoration: none;
+  color: #023047;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+  
+}

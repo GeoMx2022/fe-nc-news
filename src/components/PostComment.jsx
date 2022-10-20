@@ -1,10 +1,12 @@
+import styles from "../styling/PostComment.module.css";
+
 import { useState, useContext } from "react";
 
 import { UserLoginContext } from "../contexts/UserLogin";
 
 import { postNewComment } from "../api/api";
 
-import ArticleCommentsCard from "./CommentsCard";
+import CommentsCard from "../components/CommentsCard";
 import ErrorsPage from "../Error-handling/ErrorsPage";
 
 export default function PostComment({ id }) {
@@ -34,16 +36,16 @@ export default function PostComment({ id }) {
 
   if (isLoading)
     return (
-      <div className="postComment__div--loading">
+      <div className={styles.postComment__div__loading}>
         <h2>Loading...</h2>
       </div>
     );
 
   if (isPosted)
     return (
-      <div className="postedItem">
-        <p>Your Comment has Been Added:</p>
-        <ArticleCommentsCard comment={postedComment} />
+      <div className={styles.postComment__div__isPosted}>
+        <p className={styles.postComment__div__isPosted__p}>Your comment has been added:</p>
+        <CommentsCard comment={postedComment} />
       </div>
     );
 
@@ -51,20 +53,21 @@ export default function PostComment({ id }) {
 
   return (
     <div>
-      <form
+      <form className={styles.postComment__div__container}
         onSubmit={(event) => {
           handleSubmit(event);
         }}
       >
-        <label>
+        <label className={styles.postComment__label}>
           Comment Text:
           <textarea
+            className={styles.postComment__textarea}
             value={newComment}
             onChange={(event) => setNewComment(event.target.value)}
             required
           ></textarea>
         </label>
-        <button type="submit">Post Comment</button>
+        <button type="submit" className={styles.postComment__btn}>Post</button>
       </form>
     </div>
   );

@@ -9,6 +9,7 @@ import { fetchFocusArticle } from "../api/api";
 import { patchVotes } from "../api/api";
 
 import ErrorsPage from "../Error-handling/ErrorsPage";
+import Navigation from "../components/Navigation"
 
 export default function Article() {
   const { id } = useParams();
@@ -54,22 +55,35 @@ export default function Article() {
 
   if (error) return <ErrorsPage errMsg={error.response.data.msg} />;
   return (
-    <div className="article__div">
+    <div className={styles.article__div}>
+      <Navigation />
       {isLoading ? (
-        <div className="article__div--loading">
+        <div className={styles.article__div__loading}>
           <h2>Loading...</h2>
         </div>
       ) : (
-        <div className={styles.article__div}>
-          <h2>Title: {focusArticle.title}</h2>
-          <p>Topic: {focusArticle.topic}</p>
-          <p>Author: {focusArticle.author}</p>
-          <p>Body: {focusArticle.body}</p>
-          <p>Posted: {focusArticle.created_at}</p>
-          <Link to={`/articles/${id}/comments`} className="article__Link">View Comments: {focusArticle.comment_count}</Link>
-          <p>Votes: {voteCount + focusArticle.votes}</p>
-          <button disabled={disableBtn} onClick={handleUpVotes}>👍</button>
-          <button disabled={disableBtn} onClick={handleDownVotes}>👎</button>
+        <div>
+          <div className={styles.article__div__card}>
+            <strong className={styles.article__div__title}>{focusArticle.title}</strong>
+            <pre><br className={styles.article__lineBreak}></br></pre>
+            <p>{focusArticle.body}</p>
+            <pre><br className={styles.article__lineBreak}></br></pre>
+            <p><strong>Topic: </strong>{focusArticle.topic}</p>
+            <p><strong>Author: </strong>{focusArticle.author}</p>
+            <p><strong>Posted: </strong>{focusArticle.created_at}</p>
+            <p><strong>Votes: </strong>{voteCount + focusArticle.votes}</p>
+            <Link to={`/articles/${id}/comments`} className="article__Link">
+              View Comments: {focusArticle.comment_count}
+            </Link>
+            <div className={styles.article__div__votes}>
+              <button disabled={disableBtn} onClick={handleUpVotes}>
+                👍
+              </button>
+              <button disabled={disableBtn} onClick={handleDownVotes}>
+                👎
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>

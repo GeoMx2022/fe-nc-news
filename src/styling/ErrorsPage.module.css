@@ -1,0 +1,14 @@
+.errorsPage__div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorsPage__msg {
+  font-family: "Londrina Solid", cursive;
+  font-size: calc(2rem + 1vw);
+  text-decoration: none;
+  text-align: center;
+}

@@ -1,48 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Londrina+Solid:wght@300&display=swap");
 
 .home__div {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .home__ptag1 {
-  display: flex;
-  align-items: flex-end;
-  flex: 1 1 6rem;
-  font-size: 2em;
+  text-align: center;
+  font-size: calc(2rem + 3vw);
   font-family: "Londrina Solid", cursive;
 }
 
 .home__ptag2 {
-  margin: 0px 50px;
-  display: flex;
-  align-items: center;
-  flex: 1 1 6rem;
-  font-size: 1.2em;
-  font-family: "Londrina Solid", cursive;
   text-align: center;
-  color: #fb5607;
-}
-
-.home__div__enterapp__container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1 1 15rem;
+  font-size: calc(1.2rem + 1.8vw);
+  font-family: "Londrina Solid", cursive;
+  color: #ff7900;
 }
 
 .home__div__enterapp__link {
-  height: 90px;
-  width: 200px;
-  line-height: 90px;
-  background: #e9ecef;
+  padding: 5px 10px;
+  line-height: 6rem;
   border: 2px solid #023047;
   border-radius: 12px;
   font-family: "Londrina Solid", cursive;
-  font-size: 2em;
+  font-size: calc(2rem + 2vw);  
   text-align: center;
   text-decoration: none;
+  background: #e9ecef;
   color: #023047;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 }
+

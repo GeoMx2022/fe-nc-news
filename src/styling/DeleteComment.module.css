@@ -7,27 +7,30 @@
 
 .deleteComment__div__btn {
   align-self: flex-end;
-  height: 25px;
-  width: 45px;
-  background: #fb5607;
-  border: 2px solid #023047;
-  border-radius: 12px;
-  font-family: "Londrina Solid", cursive;
-  font-size: 1em;
-  text-align: center;
-  text-decoration: none;
-  color: #023047;
-}
-
-.deleteComment__div__btn__disabled {
-  align-self: flex-end;
-  height: 25px;
-  width: 45px;
+  padding: 5px;
+  height: auto;
+  width: 100%;
+  max-width: 60px;
   background: #023047;
   border: 2px solid #023047;
   border-radius: 12px;
   font-family: "Londrina Solid", cursive;
-  font-size: 1em;
+  font-size: calc(0.8rem + 0.3vw);
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.deleteComment__div__btn__disabled {
+  align-self: flex-end;
+  height: auto;
+  width: 100%;
+  max-width: 60px;
+  background: #023047;
+  border: 2px solid #023047;
+  border-radius: 12px;
+  font-family: "Londrina Solid", cursive;
+  font-size: calc(0.8rem + 0.3vw);
   text-align: center;
   text-decoration: none;
   color: #023047;

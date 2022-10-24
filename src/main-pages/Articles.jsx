@@ -67,17 +67,16 @@ export default function Articles() {
 
   if (error) return <ErrorsPage errMsg={error.response.data.msg} />;    
   return (
-    <div>
       <div>
         {isLoading ? (
           <div className={styles.articlesList__div__loading}>
             <h2>Loading...</h2>
           </div>
         ) : (
-          <div>
+          <div className={styles.articlesList__div}>
             <Navigation />
             <SortBy sortOption={changeSortOrder} />
-            <div>
+            <div className={styles.articlesList__card}>
               {articles.map((articles) => (
                 <ArticleCard key={articles.article_id} articles={articles} />
               ))}
@@ -85,6 +84,5 @@ export default function Articles() {
           </div>
         )}
       </div>
-    </div>
   );
 }

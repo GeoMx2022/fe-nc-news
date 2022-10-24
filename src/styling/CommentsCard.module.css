@@ -1,11 +1,13 @@
 .commentsCard__div {
+  height: auto;
+  width: 380px;
   margin: 10px;
   padding: 12px;
-  background: #8ecae6;
+  background: #ff7900;
   border: 2px solid #023047;
   border-radius: 12px;
   font-family: "Londrina Solid", cursive;
-  font-size: 0.8em;
+  font-size: calc(0.8rem + 0.3vw);
   text-decoration: none;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 }

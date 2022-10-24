@@ -3,21 +3,28 @@
 .article__div {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+}
+
+.article__div__main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
 }
 
 .article__div__card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  max-width: 1200px;
   margin: 10px;
   padding: 12px;
-  background: #8ecae6;
+  background: #cae9ff;
   border: 2px solid #023047;
   border-radius: 12px;
   font-family: "Londrina Solid", cursive;
-  font-size: 0.8em;
+  font-size: calc(0.8rem + 0.5vw);
   text-decoration: none;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 }
@@ -34,11 +41,40 @@
   font-family: "Londrina Solid", cursive;
   font-size: 2.5em;
   text-decoration: none;
+  text-align: center;
 }
 
 .article__div__votes {
   display: flex;
-  justify-content: flex-end;
-  align-self: flex-end;
+  justify-content: flex-start;
+  align-self: flex-start;
   gap: 8px;
+}
+
+.article__div__btn {
+  padding: 7px;
+  background-color: #e9ecef;
+  border: 2px solid #023047;
+  border-radius: 12px;
+  font-family: "Londrina Solid", cursive;
+  font-size: calc(0.8rem + 0.3vw);
+  text-decoration: none;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.article__link {
+  align-self: flex-end;
+  padding: 2px 5px;
+  height: auto;
+  width: 100%;
+  max-width: 140px;
+  background: #ff7900;
+  border: 2px solid #023047;
+  border-radius: 12px;
+  font-family: "Londrina Solid", cursive;
+  font-size: calc(0.8rem + 0.3vw);
+  text-align: center;
+  text-decoration: none;
+  color: #023047;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 }

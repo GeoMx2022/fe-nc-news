@@ -1,7 +1,7 @@
 # Views News Frontend
 
 ### Project Summary
-Views News is a social media app that allows users to:
+Views News is a social media app (based on Reddit) that allows users to:
 * View a list of all articles
 * Sort articles by: Age, number of comments, number of likes
 * View articles by topic
@@ -12,7 +12,8 @@ Views News is a social media app that allows users to:
 * Delete a comment that the user has posted
 * IN PROGRESS - User profile
 
-This was my first project developing a functional and user-friendly frontend in React.  
+This was my first project developing a functional and user-friendly frontend in React. It has a fully responsive design for both mobile and laptops.    
+
 The app uses a default loggged user to remove the need for authentication at this stage.
 
 -----

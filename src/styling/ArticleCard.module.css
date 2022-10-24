@@ -1,17 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Londrina+Solid:wght@300&display=swap");
 
 .articleCard__div {
+  display: flex;
+  flex-direction: column;
   margin: 10px;
   padding: 12px;
-  background: #8ecae6;
+  background: #cae9ff;
   border: 2px solid #023047;
   border-radius: 12px;
   font-family: "Londrina Solid", cursive;
-  font-size: 0.8em;
+  font-size: calc(0.8rem + 0.5vw);
   text-decoration: none;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 }
 
 .articleCard__lineBreak {
   line-height: 10px;
+}
+
+.articleCard__btn {
+  align-self: flex-end;
+  padding: 2px 5px;
+  height: auto;
+  width: 100%;
+  max-width: 100px;
+  background: #ff7900;
+  border: 2px solid #023047;
+  border-radius: 12px;
+  font-family: "Londrina Solid", cursive;
+  font-size: calc(0.8rem + 0.3vw);
+  text-align: center;
+  text-decoration: none;
+  color: #023047;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 }

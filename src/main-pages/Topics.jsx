@@ -30,23 +30,21 @@ export default function Topics() {
 
   if (error) return <ErrorsPage errMsg={error.response.data.msg} />;    
   return (
-    <div>
+    <div className={styles.topics__div}>
       <Navigation />
-      <div>
+      <div className={styles.topics__div__main}>
         {isLoading ? (
           <div className={styles.topics__div__loading}>
             <h2>Loading...</h2>
           </div>
         ) : (
-          <div>
-            <div className={styles.topics__div}>
+            <div className={styles.topics__div__categories}>
               {topicTitleData.map((topic) => (
                 <div key={uuidv4()}>
                   <Link to={`/topics/${topic.slug}`} className={styles.topics__div__link}>{topic.slug.slice(0, 1).toUpperCase() + topic.slug.substring(1)}</Link>
                 </div>
               ))}
             </div>
-          </div>
         )}
       </div>
     </div>

@@ -62,27 +62,54 @@ export default function Article() {
           <h2>Loading...</h2>
         </div>
       ) : (
-        <div>
+        <div className={styles.article__div__main}>
           <div className={styles.article__div__card}>
-            <strong className={styles.article__div__title}>{focusArticle.title}</strong>
-            <pre><br className={styles.article__lineBreak}></br></pre>
+            <strong className={styles.article__div__title}>
+              {focusArticle.title}
+            </strong>
+            <pre>
+              <br className={styles.article__lineBreak}></br>
+            </pre>
             <p>{focusArticle.body}</p>
-            <pre><br className={styles.article__lineBreak}></br></pre>
-            <p><strong>Topic: </strong>{focusArticle.topic}</p>
-            <p><strong>Author: </strong>{focusArticle.author}</p>
-            <p><strong>Posted: </strong>{focusArticle.created_at}</p>
-            <p><strong>Votes: </strong>{voteCount + focusArticle.votes}</p>
-            <Link to={`/articles/${id}/comments`} className="article__Link">
-              View Comments: {focusArticle.comment_count}
-            </Link>
+            <pre>
+              <br className={styles.article__lineBreak}></br>
+            </pre>
+            <p>
+              <strong>Topic: </strong>
+              {focusArticle.topic}
+            </p>
+            <p>
+              <strong>Author: </strong>
+              {focusArticle.author}
+            </p>
+            <p>
+              <strong>Posted: </strong>
+              {focusArticle.created_at}
+            </p>
+            <p>
+              <strong>Votes: </strong>
+              {voteCount + focusArticle.votes}
+            </p>
+
             <div className={styles.article__div__votes}>
-              <button disabled={disableBtn} onClick={handleUpVotes}>
+              <button
+                disabled={disableBtn}
+                onClick={handleUpVotes}
+                className={styles.article__div__btn}
+              >
                 👍
               </button>
-              <button disabled={disableBtn} onClick={handleDownVotes}>
+              <button
+                disabled={disableBtn}
+                onClick={handleDownVotes}
+                className={styles.article__div__btn}
+              >
                 👎
-              </button>
-            </div>
+              </button>            
+            </div>              
+            <Link to={`/articles/${id}/comments`} className={styles.article__link}>
+              View Comments: {focusArticle.comment_count}
+            </Link>
           </div>
         </div>
       )}

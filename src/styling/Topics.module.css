@@ -3,15 +3,29 @@
 .topics__div {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+}
+
+.topics__div__main {
+  display: flex;
+  flex-direction: column;  
+  flex-grow: 1;
+}
+
+.topics__div__categories {
+  display: flex; 
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
   align-items: center;
-  padding-top: 30px;
+  gap: 1.5rem;
 }
 
 .topics__div__loading {
-  display: flex;
   font-family: "Londrina Solid", cursive;
-  font-size: 2.5em;
+  font-size: calc(2rem + 1vw);
   text-decoration: none;
+  text-align: center;
 }
 
 .topics__div__link {
@@ -20,14 +34,11 @@
   justify-content: center;
   padding: 5px 10px;
   margin: 15px;
-  height: 60px;
-  width: 120px;
-  line-height: 60px;
   background: #fb5607;
   border: 2px solid #023047;
   border-radius: 12px;
   font-family: "Londrina Solid", cursive;
-  font-size: 2em;
+  font-size: calc(2rem + 2vw);
   text-align: center;
   text-decoration: none;
   color: #023047;

@@ -9,7 +9,8 @@ export default function ArticleCard({articles}) {
       <pre><br className={styles.articlesCard__lineBreak}></br></pre>
       <p><strong>Topic: </strong>{articles.topic}</p>
       <p><strong>Author: </strong>{articles.author}</p>
-      <Link to={`/articles/${articles.article_id}`}>View Article</Link>
+      <pre><br className={styles.articlesCard__lineBreak}></br></pre>
+      <Link to={`/articles/${articles.article_id}`} className={styles.articleCard__btn}>View Article</Link>
     </div>
   )
 }

@@ -1,15 +1,14 @@
 .postComment__div__loading {
-  display: flex;
   font-family: "Londrina Solid", cursive;
-  font-size: 2.5em;
+  font-size: calc(2rem + 2vw);
   text-decoration: none;
 }
 
 .postComment__div__isPosted {
-  display: flex; 
+  display: flex;
   flex-direction: column;
+  flex-grow: 1;
   align-items: flex-start;
-  min-width: 100%;
 }
 
 .postComment__div__isPosted__p {
@@ -19,50 +18,80 @@
   margin-top: 10px;
   margin-bottom: 3px;
   font-family: "Londrina Solid", cursive;
-  font-size: 0.8em;
+  font-size: calc(0.8rem + 0.3vw);
   text-decoration: none;
+}
+
+.postComment__main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1221px; 
+  flex-grow: 1;
 }
 
 .postComment__div__container {
   display: flex;
+  flex-direction: row;
+  flex-grow: 1;
   align-items: center;
-  gap: 10px;
-  margin: 10px 0px;
+  justify-content: center;
+  gap: 1vw;
+  margin: 10px;
   padding: 12px;
   background: #e9ecef;
   border: 2px solid #023047;
   border-radius: 12px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
-  text-align: center;
 }
 
 .postComment__label {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 1vw;
   font-family: "Londrina Solid", cursive;
-  font-size: 1em;
+  font-size: calc(0.8rem + 0.3vw);
   text-decoration: none;
 }
 
 .postComment__textarea {
+  display: flex;
+  flex-grow: 1;
+  width: 150px;
   border: 2px solid #023047;
   font-family: "Londrina Solid", cursive;
-  font-size: 0.8em;
+  font-size: calc(0.8rem + 0.3vw);
   text-align: left;
   text-decoration: none;
   color: #023047;
 }
 
+@media all and (min-width: 600px) {
+  .postComment__textarea {
+    width: 430px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .postComment__textarea {
+    width: 900px;
+  }
+}
+
 .postComment__btn {
-  height: 25px;
-  width: 45px;
-  background: #fb5607;
+  padding: 7px;
+  height: auto;
+  width: 100%;
+  max-width: 60px;
+  background: #ff7900;
   border: 2px solid #023047;
   border-radius: 12px;
   font-family: "Londrina Solid", cursive;
-  font-size: 1em;
+  font-size: calc(0.8rem + 0.3vw);
   text-align: center;
   text-decoration: none;
   color: #023047;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 }
+  
+  

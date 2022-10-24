@@ -40,10 +40,10 @@ export default function Comments() {
             <h2>Loading...</h2>
           </div>
         ) : (
-          <div>
-            {comments.map((comment) => (
-              <CommentsCard key={comment.comment_id} comment={comment} />
-            ))}
+          <div className={styles.comments__list}>
+              {comments.map((comment) => (
+                <CommentsCard key={comment.comment_id} comment={comment} />
+              ))}
           </div>
         )}
       </div>

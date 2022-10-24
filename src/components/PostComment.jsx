@@ -52,7 +52,7 @@ export default function PostComment({ id }) {
   if (error) return <ErrorsPage errMsg={error.response.data.msg} />;
 
   return (
-    <div>
+    <div className={styles.postComment__main}>
       <form className={styles.postComment__div__container}
         onSubmit={(event) => {
           handleSubmit(event);

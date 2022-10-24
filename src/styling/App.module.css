@@ -2,30 +2,37 @@
 * {
   padding: 0px;
   margin: 0px;
+  box-sizing: border-box;
 }
 
 .app__div {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border: 1px solid #023047;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 }
 
 .app__div__routes {
-  flex: 1 1 27.1rem;
   display: flex;
+  flex-direction: column;
+  flex-grow: 8;
+  overflow-y: auto;
 }
 
 .userLoginInfo__div {
+  flex-grow: 1;
   display: flex;
-  flex: 1 1 3rem;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 1.4vw;
 }
 
 .userLoginInfo__div h3 {
   font-family: "Londrina Solid", cursive;
-  font-size: 0.9em;
+  font-size: calc(0.8rem + 0.5vw);
   text-decoration: none;
 }
 
@@ -33,25 +40,25 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 5px;
+  gap: 1.2vw;
 }
 
 .userLoginInfo__div img {
-  max-width: 35px;
-  max-height: 35px;
+  width: 50%;
+  max-width: 50px;
+  height: auto;
 }
 
 .userLoginInfo__div p {
   font-family: "Londrina Solid", cursive;
-  font-size: 0.9em;
+  font-size: calc(0.8rem + 0.5vw);
   text-decoration: none;
 }
 
 /*
-Light blue: #8ecae6
-Steel grey: #219ebc
+Light blue: #cae9ff
 Black/dark blue: #023047
-Orange: #fb5607
-white: #fffff
+Orange: #ff7900
+white: #ffffff
 grey: #e9ecef
 */

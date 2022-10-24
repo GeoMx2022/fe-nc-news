@@ -5,7 +5,6 @@ import { useState } from 'react';
 import { UserLoginContext } from "./contexts/UserLogin"
 
 import Home from "./main-pages/Home";
-import Login from "./main-pages/Login";
 import Articles from "./main-pages/Articles";
 import Topics from "./main-pages/Topics";
 import Comments from "./main-pages/Comments";
@@ -29,7 +28,6 @@ export default function App() {
             <Routes>
               <Route path="*" element={<ErrorsPage />}></Route>
               <Route path="/" element={<Home />}></Route>
-              <Route path="/login" element={<Login />}></Route>
               <Route path="/articles" element={<Articles />}></Route> 
               <Route path="/topics" element={<Topics />}></Route>
               <Route path="/topics/:topic" element={<Articles />}></Route>

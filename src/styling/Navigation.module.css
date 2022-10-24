@@ -3,6 +3,7 @@
 .navigation__div {
   display: flex;
   justify-content: center;
+  gap: 3vw;
 }
 
 .navigation__link1 {
@@ -12,7 +13,7 @@
   border: 2px solid #023047;
   border-radius: 12px;
   font-family: "Londrina Solid", cursive;
-  font-size: 0.9em;
+  font-size: calc(1rem + 0.8vw);
   text-align: center;
   text-decoration: none;
   color: #023047;
@@ -26,7 +27,7 @@
   border: 2px solid #023047;
   border-radius: 12px;
   font-family: "Londrina Solid", cursive;
-  font-size: 0.9em;
+  font-size: calc(1rem + 0.8vw);
   text-align: center;
   text-decoration: none;
   color: #023047;

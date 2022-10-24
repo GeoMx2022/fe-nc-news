@@ -18,7 +18,7 @@ The app uses a default loggged user to remove the need for authentication at thi
 
 -----
 #### Hosted App  
-A hosted version of the app on Heroku can be found here: [Views News]()
+A hosted version of the app on Heroku can be found here: [Views News](https://viewsnews.netlify.app)
 
 -----
 ####  Repository  
